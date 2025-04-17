@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Изменить игрока</title>
+</head>
+<body>
+   <h1>Изменить данные игрока</h1>
+   <form method="POST">
+       <label>Имя:</label>
+       <input type="text" name="name" value="{{ player.name }}" required><br>
+       <label>Очки:</label>
+       <input type="number" name="score" value="{{ player.score }}" required><br>
+       <input type="submit" value="Сохранить">
+   </form>
+   <a href="/">Назад</a>
+</body>
+</html>

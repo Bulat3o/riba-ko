@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Ладно.</title>
+</head>
+<body>
+   <h1>Таблица игроков</h1>
+   <a href="/add">Добавить игрока</a>
+   <ul>
+       {% for player in players %}
+           <li>
+               {{ player.name }} — {{ player.score }} очков
+               <a href="/edit/{{ player.id }}">Изменить</a>
+               <form action="/delete/{{ player.id }}" method="POST" style="display:inline;">
+                   <input type="submit" value="Удалить">
+               </form>
+           </li>
+       {% endfor %}
+   </ul>
+</body>
+</html>
+
